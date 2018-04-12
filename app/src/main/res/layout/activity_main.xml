@@ -18,31 +18,31 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <android.support.constraint.Guideline
-        android:layout_width="wrap_content"
-        android:layout_height="567dp"
         android:id="@+id/v_guideline1"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="58dp"
-        app:layout_constraintGuide_percent="0.15104167"/>
-
-    <android.support.constraint.Guideline
         android:layout_width="wrap_content"
         android:layout_height="567dp"
-        android:id="@+id/v_guideline2"
         android:orientation="vertical"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="329dp"
-        app:layout_constraintGuide_percent="0.8567708"/>
+        app:layout_constraintGuide_percent="0.15104167"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <android.support.constraint.Guideline
+        android:id="@+id/v_guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="567dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8567708"
+        tools:layout_editor_absoluteX="329dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/h_guideline1"
         android:layout_width="384dp"
         android:layout_height="wrap_content"
-        android:id="@+id/h_guideline1"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteY="326dp"
+        app:layout_constraintGuide_percent="0.5749559"
         tools:layout_editor_absoluteX="0dp"
-        app:layout_constraintGuide_percent="0.5749559"/>
+        tools:layout_editor_absoluteY="326dp" />
 
     <Button
         android:id="@+id/wechatLoginButton"
@@ -85,14 +85,14 @@
         app:layout_constraintTop_toBottomOf="@+id/orImageView" />
 
     <ImageView
+        android:id="@+id/orImageView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/or"
-        android:id="@+id/orImageView"
+        android:layout_marginTop="8dp"
         app:layout_constraintLeft_toLeftOf="@+id/v_guideline1"
         app:layout_constraintRight_toLeftOf="@+id/v_guideline2"
         app:layout_constraintTop_toBottomOf="@+id/fbLoginButton"
-        android:layout_marginTop="8dp"/>
+        app:srcCompat="@drawable/or" />
 
     <CheckBox
         android:id="@+id/termCheckBox"
@@ -171,17 +171,94 @@
         app:layout_constraintTop_toTopOf="@+id/fbLoginButton" />
 
     <Button
+        android:id="@+id/loginButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/login_button_bg"
+        android:text="Logar"
+        android:textColor="@android:color/white"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/guideline11"
+        app:layout_constraintStart_toStartOf="@+id/otherAccButton"
+        app:layout_constraintTop_toBottomOf="@+id/orImageView" />
+
+    <Button
         android:id="@+id/createAccountButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/fb_button_bg"
-        android:backgroundTint="@android:color/holo_green_dark"
+        android:background="@drawable/create_account_button_bg"
         android:text="Criar Conta"
         android:textColor="@android:color/white"
         android:visibility="invisible"
-        app:layout_constraintLeft_toLeftOf="@+id/v_guideline1"
-        app:layout_constraintRight_toLeftOf="@+id/v_guideline2"
+        app:layout_constraintEnd_toEndOf="@+id/otherAccButton"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toBottomOf="@+id/orImageView" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
 
 </android.support.constraint.ConstraintLayout>
