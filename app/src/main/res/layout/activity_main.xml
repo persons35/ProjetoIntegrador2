@@ -52,34 +52,37 @@
         android:drawableLeft="@drawable/gmail_logo1"
         android:text="Google Login"
         android:textColor="@android:color/white"
+        android:visibility="visible"
         app:layout_constraintLeft_toLeftOf="@+id/v_guideline1"
         app:layout_constraintRight_toLeftOf="@+id/v_guideline2"
         app:layout_constraintTop_toTopOf="@+id/h_guideline1" />
 
     <Button
-        android:text="Facebook Login"
+        android:id="@+id/fbLoginButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/fbLoginButton"
-        android:textColor="@android:color/white"
-        app:layout_constraintRight_toLeftOf="@+id/v_guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/wechatLoginButton"
         android:layout_marginTop="8dp"
-        app:layout_constraintLeft_toLeftOf="@+id/v_guideline1"
+        android:background="@drawable/fb_button_bg"
         android:drawableLeft="@drawable/fb_logo"
-        android:background="@drawable/fb_button_bg"/>
+        android:text="Facebook Login"
+        android:textColor="@android:color/white"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="@+id/v_guideline1"
+        app:layout_constraintRight_toLeftOf="@+id/v_guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/wechatLoginButton" />
 
     <Button
-        android:text="Outras contas"
+        android:id="@+id/otherAccButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/otherAccButton"
-        android:textColor="@android:color/white"
-        app:layout_constraintRight_toLeftOf="@+id/v_guideline2"
-        app:layout_constraintLeft_toLeftOf="@+id/v_guideline1"
+        android:layout_marginTop="8dp"
         android:background="@drawable/other_acc_button_bg"
-        app:layout_constraintTop_toBottomOf="@+id/orImageView"
-        android:layout_marginTop="8dp"/>
+        android:text="Outras contas"
+        android:textColor="@android:color/white"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="@+id/v_guideline1"
+        app:layout_constraintRight_toLeftOf="@+id/v_guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/orImageView" />
 
     <ImageView
         android:layout_width="0dp"
@@ -122,5 +125,63 @@
         android:textSize="10sp"
         app:layout_constraintStart_toStartOf="@+id/v_guideline1"
         app:layout_constraintTop_toBottomOf="@+id/termCheckBox" />
+
+    <EditText
+        android:id="@+id/field_email"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/fb_button_bg"
+
+        android:backgroundTint="@color/common_google_signin_btn_text_light_default"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="10dp"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/background_light"
+        android:textColorHint="@android:color/darker_gray"
+
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/wechatLoginButton"
+        app:layout_constraintEnd_toEndOf="@+id/wechatLoginButton"
+        app:layout_constraintLeft_toLeftOf="@+id/v_guideline1"
+        app:layout_constraintRight_toLeftOf="@+id/v_guideline2"
+        app:layout_constraintStart_toStartOf="@+id/wechatLoginButton"
+        app:layout_constraintTop_toTopOf="@+id/h_guideline1" />
+
+    <EditText
+        android:id="@+id/field_password"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/fb_button_bg"
+
+        android:backgroundTint="@color/common_google_signin_btn_text_light_default"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/background_light"
+        android:textColorHint="@android:color/darker_gray"
+
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/fbLoginButton"
+        app:layout_constraintLeft_toLeftOf="@+id/v_guideline1"
+        app:layout_constraintRight_toLeftOf="@+id/v_guideline2"
+        app:layout_constraintTop_toTopOf="@+id/fbLoginButton" />
+
+    <Button
+        android:id="@+id/createAccountButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/fb_button_bg"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="Criar Conta"
+        android:textColor="@android:color/white"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="@+id/v_guideline1"
+        app:layout_constraintRight_toLeftOf="@+id/v_guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/orImageView" />
 
 </android.support.constraint.ConstraintLayout>

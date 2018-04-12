@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "880676100284",
+    "firebase_url": "https://greencoin-87179.firebaseio.com",
+    "project_id": "greencoin-87179",
+    "storage_bucket": "greencoin-87179.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880676100284:android:778500d38250755e",
+        "android_client_info": {
+          "package_name": "pa.senac.br.greencoin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "880676100284-v0jpra6m0bq2kj1b8n4lmg05fqf0ccrl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pa.senac.br.greencoin",
+            "certificate_hash": "8035fd9ab2dacfb3bd4ecf07561041c784addcf4"
+          }
+        },
+        {
+          "client_id": "880676100284-18qdmql2jjpvtib8ui32n300rn8neae3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pa.senac.br.greencoin",
+            "certificate_hash": "4b5ac0208ac64f0c75e3b22457a2380a6e38943c"
+          }
+        },
+        {
+          "client_id": "880676100284-s00s36mdn8h5q7ov88r2ua11msmld0js.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCD-uPx4nFgtboktp5nC3ZDK9c9otYtg-0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "880676100284-s00s36mdn8h5q7ov88r2ua11msmld0js.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
