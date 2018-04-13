@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements
         progressDialog.hide();
         //verifica se usuario está logado
         if (user != null) {
-            Intent intent = new Intent(MainActivity.this,AppActivity.class);
+            Intent intent = new Intent(MainActivity.this,ApplicationActivity.class);
             startActivity(intent);
             Log.i("updateUI","Usuario está logado");
         } else {
