@@ -19,6 +19,10 @@ public class AppActivity extends AppCompatActivity implements View.OnClickListen
 
         findViewById(R.id.logout_button).setOnClickListener(this);
 
+        mAuth = FirebaseAuth.getInstance();
+
+
+        // colocar aqui pra mostrar em um textview o email do user logado
 
     }
 
