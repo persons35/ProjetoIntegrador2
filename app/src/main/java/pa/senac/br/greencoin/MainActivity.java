@@ -54,7 +54,8 @@ public class MainActivity extends AppCompatActivity implements
 
         //In the onCreate() method, initialize the FirebaseAuth instance.
         mAuth = FirebaseAuth.getInstance();
-        mAuth.signOut();
+
+        //mAuth.signOut();
         //mAuth.createUserWithEmailAndPassword("caiolobatogon@gmail.com","12345678");
 
         videoBG();
@@ -65,23 +66,25 @@ public class MainActivity extends AppCompatActivity implements
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
-        //FirebaseUser currentUser = mAuth.getCurrentUser();
-        //updateUI(currentUser);
-        verificaUserLogado();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        updateUI(currentUser);
     }
 
-
-    private void verificaUserLogado() {
-        //Verificar usuario logado
-        if(mAuth.getCurrentUser()!=null){
+    private void updateUI(FirebaseUser user) {
+        progressDialog.hide();
+        //verifica se usuario está logado
+        if (user != null) {
             Intent intent = new Intent(MainActivity.this,AppActivity.class);
             startActivity(intent);
-            Log.i("verificarUsuario","Usuario está logado");
-        }else {
-
-            Log.i("verificarUsuario","Usuario não está logado");
+            Log.i("updateUI","Usuario está logado");
+        } else {
+            Log.i("updateUI","Usuario não está logado");
         }
     }
+
+
+
+
 
     @Override
     public void onClick(View v) {
@@ -120,16 +123,14 @@ public class MainActivity extends AppCompatActivity implements
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("createUser", "createUserWithEmail:success");
-                            verificaUserLogado();
-                            //FirebaseUser user = mAuth.getCurrentUser();
-                            //updateUI(user);
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("createUser", "createUserWithEmail:failure", task.getException());
-
                             Toast.makeText(MainActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
-                            //updateUI(null);
+                            updateUI(null);
                         }
 
                         // [START_EXCLUDE]
@@ -159,15 +160,14 @@ public class MainActivity extends AppCompatActivity implements
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("signIn", "signInWithEmail:success");
-                            verificaUserLogado();
-                            //FirebaseUser user = mAuth.getCurrentUser();
-                            //updateUI(user);
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("signIn", "signInWithEmail:failure", task.getException());
                             Toast.makeText(MainActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
-                            //updateUI(null);
+                            updateUI(null);
                         }
 
                         // [START_EXCLUDE]
