@@ -6,24 +6,24 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_mapa"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@android:drawable/ic_dialog_map"
             android:title="Mapa" />
         <item
             android:id="@+id/nav_anuncio"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@android:drawable/ic_search_category_default"
             android:title="Anúncios" />
         <item
             android:id="@+id/nav_fiquesabendo"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@android:drawable/ic_dialog_info"
             android:title="Fique sabendo" />
 
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Conta">
         <menu>
             <item
                 android:id="@+id/nav_logout"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@android:drawable/ic_lock_power_off"
                 android:title="Deslogar" />
 
         </menu>

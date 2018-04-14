@@ -16,15 +16,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class ApplicationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private FirebaseAuth mAuth;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,11 @@ public class ApplicationActivity extends AppCompatActivity
 
 
         mAuth = FirebaseAuth.getInstance();
+
+
+        //No inicio já abre no fragment de mapas
+        getSupportFragmentManager().beginTransaction().replace(R.id.screen_area,new MapaFragment()).commit();
+
         }
 
     @Override
@@ -61,6 +67,12 @@ public class ApplicationActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.application, menu);
+
+        //Pegando o e-mail do Usuario e jogando pro NavDrawer Subtitle
+        String userEmail = mAuth.getCurrentUser().getEmail();
+        TextView subNavDrawer = findViewById(R.id.textView);
+        subNavDrawer.setText(userEmail);
+
         return true;
     }
 
@@ -109,7 +121,6 @@ public class ApplicationActivity extends AppCompatActivity
 
             ft.commit();
         }
-
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
